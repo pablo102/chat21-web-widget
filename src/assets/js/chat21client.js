@@ -986,7 +986,7 @@ class Chat21Client {
                 topic: this.presence_topic,
                 payload: '{"disconnected":true}',
                 qos: 1,
-                retain: false
+                retain: true
             },
             clientId: this.client_id,
             username: 'JWT',
