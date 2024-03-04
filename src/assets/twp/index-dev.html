@@ -148,7 +148,7 @@
             justify-content: space-around;
         }
         #header-logo{
-            max-height: 45px;
+            height: 45px;
         }
 
         .navbar{
@@ -731,6 +731,8 @@
                         brandJson['COMMON'].BASE_LOGO_WHITE? document.getElementById('header-logo').src = brandJson['COMMON'].BASE_LOGO_WHITE : null;
                         /** HEADER-DOCS RESOURCES **/    
                         document.getElementsByClassName('docs')[0].style.display = 'none'
+                        /** IFRAME TITLE**/
+                        brandJson['COMMON'].COMPANY_LOGO? document.getElementById('tiledeskiframe').title = brandJson['COMMON'].COMPANY_LOGO + ' Widget' : null;
                     }
                 }
             }
@@ -1681,7 +1683,7 @@
                     </div>
 
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
+                        <ul class="nav navbar-nav docs">
                             <li><a href="https://developer.tiledesk.com/widget/web-sdk" target="_blank">WEB SDK &amp; Docs<span></span></a></li>
                             <li><a href="https://www.tiledesk.com/pricing-cloud/" target="_blank">Pricing<span></span></a></li>
                             <li><a href="https://www.tiledesk.com/blog/" target="_blank">Blog<span></span></a></li>

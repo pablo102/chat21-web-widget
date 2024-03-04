@@ -612,6 +612,8 @@
                         /** HEADER-LOGO **/  
                         brandJson['COMMON'].BASE_LOGO_NO_TEXT? document.getElementById('header-logo').src = brandJson['COMMON'].BASE_LOGO_NO_TEXT: null;
                         brandJson['COMMON'].BRAND_PRIMARY_COLOR? document.body.style.setProperty('--base-company-logo', brandJson['COMMON'].BRAND_PRIMARY_COLOR): null;
+                        /** IFRAME TITLE**/
+                        brandJson['COMMON'].COMPANY_NAME? document.getElementById('tiledeskiframe').title = brandJson['COMMON'].COMPANY_NAME + ' Widget' : null;
                     }
                 }
                     

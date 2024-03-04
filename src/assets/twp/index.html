@@ -151,7 +151,7 @@
             justify-content: space-around;
         }
         #header-logo{
-            max-height: 45px;
+            height: 45px;
         }
 
         #wrapper {
@@ -415,6 +415,8 @@
                         brandJson['COMMON'].BASE_LOGO_WHITE? document.getElementById('header-logo').src = brandJson['COMMON'].BASE_LOGO_WHITE : null;
                         /** HEADER-DOCS RESOURCES **/   
                         document.getElementsByClassName('docs')[0].style.display = 'none'
+                        /** IFRAME TITLE**/
+                        brandJson['COMMON'].COMPANY_LOGO? document.getElementById('tiledeskiframe').title = brandJson['COMMON'].COMPANY_LOGO + ' Widget' : null;
                     }
                     
                 }
