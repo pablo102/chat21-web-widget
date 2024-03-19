@@ -1,5 +1,8 @@
 # chat21-web-widget ver 5.0
 
+### 5.0.72-rc.3
+- changed: API_URL template key in favour of SERVER_BASE_URL
+
 ### 5.0.71.5 in PROD
 
 ### 5.0.71.4 in PROD
