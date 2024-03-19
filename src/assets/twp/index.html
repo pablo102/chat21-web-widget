@@ -415,6 +415,7 @@
                         brandJson['COMMON'].BASE_LOGO_WHITE? document.getElementById('header-logo').src = brandJson['COMMON'].BASE_LOGO_WHITE : null;
                         /** HEADER-DOCS RESOURCES **/   
                         document.getElementsByClassName('docs')[0].style.display = 'none'
+                        brandJson['COMMON'].DOCS? null: document.getElementById('share').style.display = 'none'
                         /** IFRAME TITLE**/
                         brandJson['COMMON'].COMPANY_LOGO? document.getElementById('tiledeskiframe').title = brandJson['COMMON'].COMPANY_NAME + ' Widget' : null;
                     }
@@ -519,7 +520,7 @@
                 <h2></h2>
                 <div class="b_integrations_agent_links">
                     <a href="" data-toggle="modal" data-target="#embedModal" id="enbed" style="display: none;"><em class="fa-code fa"></em>Embed</a>
-                    <a href="" data-toggle="modal" data-target="#shareModal"><em class="fa-reply fa"></em>Share</a>
+                    <a href="" data-toggle="modal" data-target="#shareModal" id="share"><em class="fa-reply fa"></em>Share</a>
                 </div>
             </div>
 

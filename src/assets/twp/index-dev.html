@@ -730,7 +730,13 @@
                         /** HEADER-LOGO **/                 
                         brandJson['COMMON'].BASE_LOGO_WHITE? document.getElementById('header-logo').src = brandJson['COMMON'].BASE_LOGO_WHITE : null;
                         /** HEADER-DOCS RESOURCES **/    
-                        document.getElementsByClassName('docs')[0].style.display = 'none'
+                        brandJson['COMMON'].DOCS? null: document.getElementById('share').style.display = 'none';
+                        if(brandJson['COMMON'].DOCS === false){ 
+                            var el = document.getElementsByClassName('docs')
+                            for (var i = 0; i < el.length; i++) {
+                                document.getElementsByClassName('docs').item(i).style.display = 'none'
+                            }
+                        }
                         /** IFRAME TITLE**/
                         brandJson['COMMON'].COMPANY_LOGO? document.getElementById('tiledeskiframe').title = brandJson['COMMON'].COMPANY_NAME + ' Widget' : null;
                     }
@@ -1752,7 +1758,7 @@
                     </div>
                     <div class="row section c21-parameters">
                         <div><h3 style="line-height: 0.3;">MANAGE <em><strong>widget settings</strong></em></h3></div>
-                        <div>Select an option for Tiledesk settings parameter</div>
+                        <div class="docs">Select an option for Tiledesk settings parameter</div>
                         <div class="row">
                             <div class="col-md-5 formElement"><span><em><strong>disconnectTime</strong></em></span></div>
                             <div class="col-md-5">
@@ -2180,10 +2186,9 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <h4 class="col-md-10 formElement">Manage SOCIAL CHANNELS <span style="font-size:12px"> (parameter accepted only in window.tiledeskSettings object)</span>
-                            </h4>
-                        </div>
+                        <div><h3 style="line-height: 0.3;">MANAGE <em><strong>SOCIAL CHANNELS</strong></em></h3></div>
+                        <div class="docs"> (parameter accepted only in window.tiledeskSettings object)</div>
+
                         <div class="row">
                             <div class="col-md-5 formElement"><span><em><strong>whatsappNumber</strong></em></span></div>
                             <div class="col-md-5">
@@ -2213,10 +2218,7 @@
                         </div>
                         
 
-
-                        <div class="row">
-                            <h4 class="col-md-10 formElement" >Manage CONVERSATION DETAIL</h4>
-                        </div>
+                        <div><h3 style="line-height: 0.3;">MANAGE <em><strong>CONVERSATION DETAIL</strong></em></h3></div>
                         <div class="row">
                             <div class="col-md-5 formElement"><span><em><strong>hideHeaderCloseButton</strong></em></span></div>
                             <div class="col-md-5">
@@ -2344,7 +2346,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-5 formElement"><span><em><strong>fileUploadAccept</strong></em> (more<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers"> here</a>)</span></div>
+                            <div class="col-md-5 formElement"><em><strong>fileUploadAccept</strong></em><span class="docs">(more<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/accept#unique_file_type_specifiers"> here</a>)</span></div>
                             <div class="col-md-5">
                                 <input class="form-control" type="text" id="fileUploadAccept" name="fileUploadAccept" placeholder="Set a comma separated string...">
                             </div>
@@ -2364,9 +2366,7 @@
                         </div>
 
 
-                        <div class="row">
-                            <h4 class="col-md-10 formElement" >Manage BUBBLE MESSAGE STYLES</h4>
-                        </div>
+                        <div><h3 style="line-height: 0.3;">MANAGE <em><strong>BUBBLE MESSAGE STYLES</strong></em></h3></div>
                         <div class="row">
                             <div class="col-md-5 formElement"><span><em><strong>bubbleSentBackground</strong></em></span></div>
                             <div class="col-md-5 formElement">
@@ -2418,10 +2418,7 @@
                         </div>
         
 
-
-                        <div class="row">
-                            <h4 class="col-md-10 formElement" >Manage BUTTON STYLES</h4>
-                        </div>
+                        <div><h3 style="line-height: 0.3;">MANAGE <em><strong>BUTTON STYLES</strong></em></h3></div>
                         <div class="row">
                             <div class="col-md-5 formElement"><span><em><strong>buttonBackgroundColor</strong></em></span></div>
                             <div class="col-md-5 formElement">
@@ -2492,7 +2489,7 @@
                         <div class="b_integrations_agent_links">
                             <a href="" data-toggle="modal" data-target="#embedModal" id="enbed" style="display: none;"><i class="fa-code fa"></i>Embed</a>
                             <!-- <a href="mailto:?subject=Tiledesk%20widget%20test%20page"><i class="fa-envelope-o fa" target="_blank"></i>Email</a> -->
-                            <a href="" data-toggle="modal" data-target="#shareModal"><i class="fa-reply fa"></i>Share</a>
+                            <a href="" data-toggle="modal" data-target="#shareModal" id="share"><i class="fa-reply fa"></i>Share</a>
                         </div>
                     </div>
 
