@@ -1,5 +1,8 @@
 # chat21-web-widget ver 5.0
 
+### 5.0.73-rc.1
+- bug-fixed: labels fixed
+
 ### 5.0.72 in PROD
 
 ### 5.0.72-rc.3
