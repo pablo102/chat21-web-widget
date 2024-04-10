@@ -131,6 +131,7 @@ export class TiledeskAuthService {
     this.appStorage.removeItem('tiledeskToken');
     this.appStorage.removeItem('currentUser');
     this.setCurrentUser(null);
+    this.setTiledeskToken(null);
   }
 
 
@@ -189,6 +190,10 @@ export class TiledeskAuthService {
   }
   getTiledeskToken(): string {
     return this.tiledeskToken;
+  }
+
+  setTiledeskToken(token: string) {
+    this.tiledeskToken = token
   }
 
 }
