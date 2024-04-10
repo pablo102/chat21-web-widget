@@ -27,6 +27,7 @@
               "src/assets",
               "src/test.html",
               "src/test-new.html",
+              "src/test-custom-authentication.html",
               "src/test-custom-auth.html",
               "src/tiledesk.js",
               "src/launch.js",
