@@ -944,7 +944,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
      * 2 - remove user in firebase
     */
     signOut(): Promise<boolean> {
-        this.logger.debug('[APP-COMP] SIGNOUT');
+        this.logger.debug('[APP-COMP] SIGNOUT', this.g.isLogged);
         if (this.g.isLogged === true) {
             this.logger.debug('[APP-COMP] prima ero loggato allora mi sloggo!');
             this.g.setIsOpen(false);
@@ -958,6 +958,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
             return this.messagingAuthService.logout();
             // this.authService.signOut(-2);
         }
+    }
+
+    clearStorage(){
+        this.logger.debug('[APP-COMP] clearStorage');
+        this.appStorageService.clear();
     }
 
     /** show widget */
@@ -1408,6 +1413,13 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
             windowContext['tiledesk'].logout = function (): Promise<boolean> {
                 return ngZone.run(() => {
                     return windowContext['tiledesk']['angularcomponent'].component.logout();
+                });
+            };
+
+             /** set logout */
+             windowContext['tiledesk'].clearStorage = function (): Promise<boolean> {
+                return ngZone.run(() => {
+                    return windowContext['tiledesk']['angularcomponent'].component.clearStorage();
                 });
             };
 
