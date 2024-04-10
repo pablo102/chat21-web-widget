@@ -40,6 +40,7 @@ export class ConversationPreviewComponent implements OnInit {
   firstScroll = true;
   // ========= end:: gestione scroll view messaggi ======= //
 
+  sizeImage : { width: number, height: number}
 
   public logger: LoggerService = LoggerInstance.getInstance()
   constructor(private sanitizer: DomSanitizer) { }
@@ -64,6 +65,7 @@ export class ConversationPreviewComponent implements OnInit {
   getMetadataSize(metadata): {width, height} {
     const MAX_WIDTH_IMAGES_PREVIEW = 230
     const MAX_HEIGHT_IMAGES_PREIEW = 150
+    console.log('PREVIEW - getMetadataSize metadata', metadata)
     if(metadata.width === undefined){
       metadata.width= MAX_WIDTH_IMAGES_PREVIEW
     }
@@ -94,6 +96,7 @@ export class ConversationPreviewComponent implements OnInit {
       sizeImage.width = MAX_HEIGHT_IMAGES_PREIEW / ratio;
       sizeImage.height = MAX_HEIGHT_IMAGES_PREIEW ;
     }
+    console.log('PREVIEW - getMetadataSize return sizeimage', sizeImage)
     return sizeImage; // h.toString();
   }
   
@@ -108,7 +111,8 @@ export class ConversationPreviewComponent implements OnInit {
       this.logger.log('[LOADER-PREVIEW-PAGE] - readAsDataURL - USE CASE IMAGE - IMAGE ', attachment);
       if(!this.fileSelected){
         this.fileSelected = Object.assign({}, this.attachments[0].metadata)
-        this.fileSelected = Object.assign(this.fileSelected, this.getMetadataSize(this.fileSelected))
+        // this.fileSelected = Object.assign(this.fileSelected, this.getMetadataSize(this.fileSelected))
+        this.sizeImage = this.getMetadataSize(this.fileSelected)
 
       }
     } else if ((attachment.file.type.startsWith("image")) && (attachment.file.type.includes("svg"))){
@@ -119,7 +123,8 @@ export class ConversationPreviewComponent implements OnInit {
       attachment.metadata.src = this.sanitizer.bypassSecurityTrustUrl(attachment.metadata.src)
       if(!this.fileSelected){
         this.fileSelected = Object.assign({}, this.attachments[0].metadata)
-        this.fileSelected = Object.assign(this.fileSelected, this.getMetadataSize(this.fileSelected))
+        // this.fileSelected = Object.assign(this.fileSelected, this.getMetadataSize(this.fileSelected))
+        this.sizeImage = this.getMetadataSize(this.fileSelected)
       }
     }else if(!attachment.file.type.startsWith("image")){
       // ---------------------------------------------------------------------
@@ -158,7 +163,8 @@ export class ConversationPreviewComponent implements OnInit {
         that.arrayFiles.push({metadata});
         if (!that.fileSelected) {
           that.fileSelected = Object.assign({}, metadata)
-          that.fileSelected = Object.assign(that.fileSelected, that.getMetadataSize(that.fileSelected))
+          // that.fileSelected = Object.assign(that.fileSelected, that.getMetadataSize(that.fileSelected))
+          that.sizeImage = that.getMetadataSize(that.fileSelected)
         }
       };
     }

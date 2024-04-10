@@ -1,5 +1,11 @@
 # chat21-web-widget ver 5.0
 
+### 5.0.74-rc.2
+- added: clearStorage public method from external iframe
+
+### 5.0.74-rc.1
+- minor improvement
+
 ### 5.0.73 in PROD
 
 ### 5.0.73-rc.1
