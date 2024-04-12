@@ -132,16 +132,18 @@ import { LikeUnlikeComponent } from './component/message/like-unlike/like-unlike
 import { Rules } from './utils/rules';
 import { ScriptService } from 'src/chat21-core/providers/scripts/script.service';
 import { CarouselComponent } from './component/message/carousel/carousel.component';
+import { BrandService } from './providers/brand.service';
 
 
 
-const appInitializerFn = (appConfig: AppConfigService, logger: NGXLogger) => {
-  return () => {
+const appInitializerFn = (appConfig: AppConfigService, brandService: BrandService, logger: NGXLogger) => {
+  return async() => {
     let customLogger = new CustomLogger(logger)
     LoggerInstance.setInstance(customLogger)
     if (environment.remoteConfig) {
-      return appConfig.loadAppConfig();
+      await appConfig.loadAppConfig();
     }
+    await brandService.loadBrand();
   };
 };
 
@@ -331,7 +333,7 @@ export function uploadFactory(http: HttpClient, appConfig: AppConfigService, app
       provide: APP_INITIALIZER,
       useFactory: appInitializerFn,
       multi: true,
-      deps: [AppConfigService, NGXLogger]
+      deps: [AppConfigService, BrandService, NGXLogger]
     },
     {
       provide: AppStorageService,
@@ -388,7 +390,8 @@ export function uploadFactory(http: HttpClient, appConfig: AppConfigService, app
     CustomTranslateService,
     Triggerhandler,
     WaitingService,
-    ScriptService
+    ScriptService,
+    BrandService
   ],
   bootstrap: [AppComponent]
 })

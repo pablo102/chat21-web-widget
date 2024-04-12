@@ -16,15 +16,12 @@ import { avatarPlaceholder, detectIfIsMobile, getParameterByName, setColorFromSt
 import { ConversationModel } from 'src/chat21-core/models/conversation';
 import { convertColorToRGBA } from 'src/chat21-core/utils/utils';
 import { Rule } from 'src/models/rule';
+import { BRAND_BASE_INFO } from './utils-resources';
 
 @Injectable({
     providedIn: 'root'
   })
 export class Globals {
-
-  BASE_LOCATION = 'https://widget.tiledesk.com/v2';
-  POWERED_BY ='<a tabindex="-1" target="_blank" href="https://www.tiledesk.com/?utm_source=widget"><img src="https://support-pre.tiledesk.com/dashboard/assets/img/logos/tiledesk-solo_logo_new_gray.svg"/><span>Powered by Tiledesk</span></a>'
-  DEFAULT_LOGO_CHAT = '/assets/images/tiledesk_logo_white_small.svg';
 
   // ============ BEGIN: SET FUNCTION BY UTILS ==============//
   // getParameterByName = getParameterByName;
@@ -226,7 +223,6 @@ export class Globals {
    * 1: initParameters
    */
   initDefafultParameters() {
-
     let wContext: any = window;
     if (window.frameElement && window.frameElement.getAttribute('tiledesk_context') === 'parent') {
       wContext = window.parent;
@@ -239,7 +235,7 @@ export class Globals {
     this.windowContext = wContext;
 
     // ============ BEGIN: SET EXTERNAL PARAMETERS ==============//
-    this.baseLocation = this.BASE_LOCATION;
+    this.baseLocation = 'https://widget.tiledesk.com/v2';
     this.autoStart = true;
     this.startHidden = false;
     /** start Authentication and startUI */
@@ -309,9 +305,9 @@ export class Globals {
     /** allows the user to download the chat transcript. The download button appears
     when the chat is closed by the operator. Permitter values: true, false.
     Default value: false */
-    this.poweredBy = this.POWERED_BY;
+    this.poweredBy = BRAND_BASE_INFO.POWERED_BY;
     /** link nel footer widget */
-    this.logoChat = this.BASE_LOCATION + this.DEFAULT_LOGO_CHAT;
+    this.logoChat = BRAND_BASE_INFO.LOGO_CHAT;
     /** url img logo */
     this.marginX = '20px';
     /** set margin left or rigth widget  */
