@@ -1,4 +1,12 @@
-# chat21-web-widget ver 5.0
+# **CHAT21-WEB-WIDGET - Changelog** ver 5.0
+
+### **Authors**: 
+    *Gabriele Panico*
+    *Dario De Pascalis* 
+### **Copyrigth**: *Tiledesk SRL*
+
+### 5.0.74-rc.3
+- added: brand-service and BrandResources class to manage resources
 
 ### 5.0.74-rc.2
 - added: clearStorage public method from external iframe
