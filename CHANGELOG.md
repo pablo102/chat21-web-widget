@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.74-rc.4
+- added: clearStorage method to index-dev.html file
+
 ### 5.0.74-rc.3
 - added: brand-service and BrandResources class to manage resources
 
