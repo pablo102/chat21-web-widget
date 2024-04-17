@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.74-rc.5
+- bug-fixed: minor improvement labels
+
 ### 5.0.74-rc.4
 - added: clearStorage method to index-dev.html file
 

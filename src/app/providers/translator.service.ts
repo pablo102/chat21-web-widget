@@ -237,9 +237,9 @@ export class TranslatorService {
       'WELCOME',
       'WELCOME_TITLE',
       'WELCOME_MSG',
-      'WELCOME',
-      'WELCOME_TITLE',
-      'WELCOME_MSG',
+      'WELLCOME',
+      'WELLCOME_TITLE',
+      'WELLCOME_MSG',
       'OPTIONS',
       'SOUND_ON',
       'SOUND_OFF',
@@ -290,9 +290,9 @@ export class TranslatorService {
       globals.BUTTON_EDIT_PROFILE = res['BUTTON_EDIT_PROFILE']; // is used ??
       globals.DOWNLOAD_TRANSCRIPT = res['DOWNLOAD_TRANSCRIPT'];
       globals.RATE_CHAT = res['RATE_CHAT']; // is used ??
-      globals.WELCOME = res['WELCOME'];
-      globals.WELCOME_TITLE = res['WELCOME_TITLE'];
-      globals.WELCOME_MSG = res['WELCOME_MSG'];
+      globals.WELCOME = res['WELLCOME'];
+      globals.WELCOME_TITLE = res['WELLCOME_TITLE'];
+      globals.WELCOME_MSG = res['WELLCOME_MSG'];
       globals.OPTIONS = res['OPTIONS'];
       globals.SOUND_ON = res['SOUND_ON'];
       globals.SOUND_OFF = res['SOUND_OFF'];
@@ -317,7 +317,9 @@ export class TranslatorService {
       globals.LABEL_PREVIEW = res['LABEL_PREVIEW']
       globals.LABEL_ERROR_FIELD_REQUIRED= res['LABEL_ERROR_FIELD_REQUIRED']
 
+      console.log('gggggg', globals.welcomeTitle)
       if (!globals.welcomeTitle) {
+
         globals.welcomeTitle = globals.WELCOME_TITLE;   /** Set the widget welcome message. Value type : string */
       }
       if (!globals.welcomeMsg) {
