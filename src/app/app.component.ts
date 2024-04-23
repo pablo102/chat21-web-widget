@@ -372,11 +372,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                 that.g.tiledeskToken = tiledeskTokenTEMP;
             }
 
-            const firebaseTokenTEMP = this.messagingAuthService.getToken();
-            if (firebaseTokenTEMP && firebaseTokenTEMP !== undefined) {
-                that.g.firebaseToken = firebaseTokenTEMP;
-            }
-
             const autoStart = this.g.autoStart;
             that.stateLoggedUser = state;
             if (state && state === AUTH_STATE_ONLINE) {

@@ -317,7 +317,6 @@ export class TranslatorService {
       globals.LABEL_PREVIEW = res['LABEL_PREVIEW']
       globals.LABEL_ERROR_FIELD_REQUIRED= res['LABEL_ERROR_FIELD_REQUIRED']
 
-      console.log('gggggg', globals.welcomeTitle)
       if (!globals.welcomeTitle) {
 
         globals.welcomeTitle = globals.WELCOME_TITLE;   /** Set the widget welcome message. Value type : string */
