@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.75-rc.1
+- added: image preview iframe on image click
+
 ### 5.0.74 in PROD
 
 ### 5.0.74-rc.5
