@@ -7,5 +7,6 @@
     [ngStyle] = "{ 'width': width, 'height': height }"
     [src]="metadata.src" 
     (load)="onLoaded($event)"
-    (click)="downloadImage(metadata.src, metadata.name)"/>
+    (click)="onClickImage()"/>
+    <!-- downloadImage(metadata.src, metadata.name);  -->
 </div>
