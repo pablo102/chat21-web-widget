@@ -119,102 +119,102 @@ export class Globals {
   LABEL_PREVIEW: string;
 
   // ============ BEGIN: EXTERNAL PARAMETERS ==============//
-   autoStart: boolean;
-   startHidden: boolean;
-   isShown: boolean;
-   isOpen: boolean;
-   startFromHome: boolean;
-   projectid: string;
-   preChatForm: boolean; 
-   align: string;
-   calloutTimer: number;
-   calloutTitle: string;
-   calloutMsg: string;
-   calloutStaus: boolean;
-   userFullname: string;
-   userEmail: string;
-   widgetTitle: string;
-   fullscreenMode: boolean;
-   hideHeaderCloseButton: boolean;
-   themeColor: string;
-   themeColorOpacity: number;
-   themeForegroundColor: string;
-   colorGradient: string;
-   colorGradient180: string;
-   allowTranscriptDownload: boolean;
-   poweredBy: string;
-   logoChat: string;
-   welcomeTitle: string;
-   welcomeMsg: string;
-   recipientId: string;
-   newConversationStart: boolean;
-   recipientFullname: string;
+  autoStart: boolean;
+  startHidden: boolean;
+  isShown: boolean;
+  isOpen: boolean;
+  startFromHome: boolean;
+  projectid: string;
+  preChatForm: boolean; 
+  align: string;
+  calloutTimer: number;
+  calloutTitle: string;
+  calloutMsg: string;
+  calloutStaus: boolean;
+  userFullname: string;
+  userEmail: string;
+  widgetTitle: string;
+  fullscreenMode: boolean;
+  hideHeaderCloseButton: boolean;
+  themeColor: string;
+  themeColorOpacity: number;
+  themeForegroundColor: string;
+  colorGradient: string;
+  colorGradient180: string;
+  allowTranscriptDownload: boolean;
+  poweredBy: string;
+  logoChat: string;
+  welcomeTitle: string;
+  welcomeMsg: string;
+  recipientId: string;
+  newConversationStart: boolean;
+  recipientFullname: string;
   //  userId: string;
   //  userToken: string;
-   marginX: string;
-   marginY: string;
-   mobileMarginX: string;
-   mobileMarginY: string;
-   launcherWidth: string;
-   launcherHeight: string;
-   baloonImage: string;
-   baloonShape: string;
-   isLogEnabled: boolean;
-   openExternalLinkButton: boolean;
-   hideHeaderConversationOptionsMenu: boolean;
-   hideCloseConversationOptionMenu: boolean;
-   hideRestartConversationOptionsMenu: boolean;
-   hideSettings: boolean;
-   filterByRequester: boolean;
-   persistence;
-   windowContext;
+  marginX: string;
+  marginY: string;
+  mobileMarginX: string;
+  mobileMarginY: string;
+  launcherWidth: string;
+  launcherHeight: string;
+  baloonImage: string;
+  baloonShape: string;
+  isLogEnabled: boolean;
+  openExternalLinkButton: boolean;
+  hideHeaderConversationOptionsMenu: boolean;
+  hideCloseConversationOptionMenu: boolean;
+  hideRestartConversationOptionsMenu: boolean;
+  hideSettings: boolean;
+  filterByRequester: boolean;
+  persistence;
+  windowContext;
 
-   showWaitTime: boolean;
-   showAvailableAgents: boolean;
-   showLogoutOption: boolean;
-   supportMode: boolean;
+  showWaitTime: boolean;
+  showAvailableAgents: boolean;
+  showLogoutOption: boolean;
+  supportMode: boolean;
 
-   customAttributes: any;
-   showAttachmentButton: boolean;
-   showAllConversations: boolean;
+  customAttributes: any;
+  showAttachmentButton: boolean;
+  showAllConversations: boolean;
   //  privacyField: string;
-   jwt: string;
+  jwt: string;
 
-   isOpenNewMessage: boolean;
-   dynamicWaitTimeReply: boolean; // *******  new ********
-   logLevel: string; // *******  new ********
+  isOpenNewMessage: boolean;
+  dynamicWaitTimeReply: boolean; // *******  new ********
+  logLevel: string; // *******  new ********
 
-   bubbleSentBackground: string; // *******  new ********
-   bubbleSentTextColor: string; // *******  new ********
-   bubbleReceivedBackground: string; // *******  new ********
-   bubbleReceivedTextColor: string; // *******  new ********
-   fontSize: string; // *******  new ********
-   fontFamily: string; // *******  new ********
-   buttonFontSize: string; // *******  new ********
-   buttonBackgroundColor: string // *******  new ********
-   buttonTextColor: string // *******  new ********
-   buttonHoverBackgroundColor: string // *******  new ********
-   buttonHoverTextColor: string // *******  new ********
-   singleConversation: boolean; // *******  new ********
-   restartConversation: boolean; // *******  new ********
-   nativeRating: boolean; // *******  new ********
-   showInfoMessage: Array<string>; // *******  new ********
-   typingLocation: string; // *******  new ********
-   allowReopen: boolean; // *******  new ********
-   continueConversationBeforeTime: number; // *******  new ********
-   participants: Array<string>; // *******  new ********
-   whatsappNumber: string; // *******  new ********
-   messangerPageTitle: string; // *******  new ********
-   telegramUsername: string; // *******  new ********
-   fileUploadAccept: string; // *******  new ********
-   disconnetTime: number; // *******  new ********
+  bubbleSentBackground: string; // *******  new ********
+  bubbleSentTextColor: string; // *******  new ********
+  bubbleReceivedBackground: string; // *******  new ********
+  bubbleReceivedTextColor: string; // *******  new ********
+  fontSize: string; // *******  new ********
+  fontFamily: string; // *******  new ********
+  buttonFontSize: string; // *******  new ********
+  buttonBackgroundColor: string // *******  new ********
+  buttonTextColor: string // *******  new ********
+  buttonHoverBackgroundColor: string // *******  new ********
+  buttonHoverTextColor: string // *******  new ********
+  singleConversation: boolean; // *******  new ********
+  restartConversation: boolean; // *******  new ********
+  nativeRating: boolean; // *******  new ********
+  showInfoMessage: Array<string>; // *******  new ********
+  typingLocation: string; // *******  new ********
+  allowReopen: boolean; // *******  new ********
+  continueConversationBeforeTime: number; // *******  new ********
+  participants: Array<string>; // *******  new ********
+  whatsappNumber: string; // *******  new ********
+  messangerPageTitle: string; // *******  new ********
+  telegramUsername: string; // *******  new ********
+  fileUploadAccept: string; // *******  new ********
+  disconnetTime: number; // *******  new ********
 
-   onPageChangeVisibilityMobile: 'open' | 'close' | 'last'; // *******  new ********
-   onPageChangeVisibilityDesktop: 'open' | 'close' | 'last'; // *******  new ********
-   displayOnMobile: boolean; // *******  new ********
-   displayOnDesktop: boolean; // *******  new ********
+  onPageChangeVisibilityMobile: 'open' | 'close' | 'last'; // *******  new ********
+  onPageChangeVisibilityDesktop: 'open' | 'close' | 'last'; // *******  new ********
+  displayOnMobile: boolean; // *******  new ********
+  displayOnDesktop: boolean; // *******  new ********
 
-   hiddenMessage: string; // *******  new ********
+  hiddenMessage: string; // *******  new ********
   constructor(
   ) { }
 
