@@ -266,7 +266,7 @@ export class TranslatorService {
 
 
     this._translate.get(labels).subscribe(res => {
-      console.log('»»»» initI18n »»»»»» »»»»»» GET TRANSLATED LABELS RES ', res);
+      // console.log('»»»» initI18n »»»»»» »»»»»» GET TRANSLATED LABELS RES ', res);
       globals.LABEL_PLACEHOLDER = res['LABEL_PLACEHOLDER']
       globals.LABEL_START_NW_CONV = res['LABEL_START_NW_CONV'];
       globals.LABEL_SELECT_TOPIC = res['LABEL_SELECT_TOPIC'];
@@ -317,7 +317,7 @@ export class TranslatorService {
       globals.LABEL_PREVIEW = res['LABEL_PREVIEW']
       globals.LABEL_ERROR_FIELD_REQUIRED= res['LABEL_ERROR_FIELD_REQUIRED']
       
-      console.log('resss', globals.WELCOME_TITLE)
+      
       if(globals.WELCOME_TITLE === 'WELLCOME_TITLE') globals.WELCOME_TITLE = res['WELCOME_TITLE']
       if (!globals.welcomeTitle) {
         globals.welcomeTitle = globals.WELCOME_TITLE;   /** Set the widget welcome message. Value type : string */
