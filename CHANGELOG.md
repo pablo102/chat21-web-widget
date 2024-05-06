@@ -5,8 +5,13 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.76 in PROD
+
 ### 5.0.75 in PROD
 - bug-fixed: WELCOME_TITLE and WELCOME_MSG translation labels not rendered
+
+### 5.0.75-rc.1
+- added: image preview iframe on image click
 
 ### 5.0.74 in PROD
 
