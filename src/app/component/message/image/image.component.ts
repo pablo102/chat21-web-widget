@@ -88,12 +88,12 @@ export class ImageComponent implements OnInit {
       div.addEventListener("click", function(event){
         window.document.body.removeChild(iframe)
       });
-      var image = ifrm.contentWindow.document.getElementById('image-popup')
-      image.addEventListener("click", function(event){
-        event.preventDefault();
-        event.stopPropagation();
-        that.downloadImage(that.metadata.src, that.metadata.name)
-      });
+      // var image = ifrm.contentWindow.document.getElementById('image-popup')
+      // image.addEventListener("click", function(event){
+      //   event.preventDefault();
+      //   event.stopPropagation();
+      //   that.downloadImage(that.metadata.src, that.metadata.name)
+      // });
     };
     
   }
