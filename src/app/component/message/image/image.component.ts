@@ -9,8 +9,8 @@ import { saveAs } from 'file-saver';
 export class ImageComponent implements OnInit {
 
   @Input() metadata: any;
-  @Input() width: number;
-  @Input() height: number;
+  @Input() width: any;
+  @Input() height: any;
   @Output() onElementRendered = new EventEmitter<{element: string, status: boolean}>();
 
   loading: boolean = true
@@ -28,8 +28,8 @@ export class ImageComponent implements OnInit {
   }
 
   downloadImage(url: string, fileName: string) {
-    console.log('Image COMP - IMAGE URL ', url) 
-    console.log('Image COMP - IMAGE FILENAME ', fileName) 
+    // console.log('Image COMP - IMAGE URL ', url); 
+    // console.log('Image COMP - IMAGE FILENAME ', fileName); 
     fileName? null: fileName = decodeURIComponent(decodeURIComponent(url).split('/').pop())
     // const a: any = document.createElement('a');
     // a.href = this.sanitizer.bypassSecurityTrustUrl(url);
@@ -55,7 +55,7 @@ export class ImageComponent implements OnInit {
     iframeContent += '<style> .tiledesk-popup {position: absolute; inset: 1px; outline-offset: -5px; background-color: rgba(0, 0, 0, 0.35); border-radius:16px; will-change: opacity;}'
     iframeContent +=    '.tiledesk-popup-content { position: fixed; inset: 0px; width: 100%;  height: 100%; display: flex;  justify-content: center; align-items: center; outline: 0px;}'
     iframeContent +=    '.tiledesk-popup-button { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; position: absolute; top: 0px; right: 0px; background-color: transparent; border: none; cursor: pointer; margin: 9px; padding: 0px; }'
-    iframeContent +=    '.tiledesk-popup-image { max-height: 90vh; max-width: 90vw; }'
+    iframeContent +=    '.tiledesk-popup-image { max-height: 80vh; max-width: 80vw; }'
     iframeContent += '</style>'
     iframeContent += '</head>';
     iframeContent += '<body>'
