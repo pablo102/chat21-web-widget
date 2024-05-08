@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.77-rc.1
+- added: ability to programmatically open an old conversation by request_id
+
 ### 5.0.76 in PROD
 
 ### 5.0.75 in PROD
