@@ -468,7 +468,7 @@
     <meta property="og:locale" content="en">
     
     <link rel="icon" type="image/png" href="./tiledesk_widget_files/logo-short.png">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <script defer="" src="./tiledesk_widget_files/jquery.min.js"></script>
     <script defer="" src="./tiledesk_widget_files/bootstrap.min.js"></script>
 
@@ -789,6 +789,11 @@
             let preChatFormTextArea = document.getElementById('preChatFormGet')
             let preChatFormJSON = window.Tiledesk('getPreChatFormJson')
             preChatFormTextArea.value = JSON.stringify(preChatFormJSON, null, 4)
+        }
+
+        function onClickOpenConversationById(){
+            let request_id = document.getElementById('request_id')
+            window.Tiledesk('openConversationById', request_id)
         }
 
         // function onClickParameter(elementName){
@@ -1753,9 +1758,20 @@
                             <textarea class="form-control" id="preChatFormGet" placeholder="Get preChatForm JSON..." rows="6" cols="60"></textarea>
                         </div>
                         <div class="row" style="text-align: right; margin:5px 0px">
-                            <button class="btn btn-light" onclick="onClickGetPreChatForm()">Get Form <i class="fa fa-sticky-note-o" aria-hidden="true"></i></button>
+                            <button class="btn btn-light" onclick="onClickGetPreChatForm()">Get Form <i class="fa-regular fa-sticky-note" aria-hidden="true"></i></button>
                         </div>
 
+                    </div>
+                    <div class="row section">
+                        <div><h3 style="line-height: 0.3;">OPEN <em><strong>conversation</strong></em></h3></div>
+
+                        <div>Insert an <em><strong>existing</strong></em> request ID </div>
+                        <div class="row" style="margin: 0">
+                            <textarea class="form-control" id="request_id" placeholder="support-group-UUID" rows="1" cols="60"></textarea>
+                        </div>
+                        <div class="row" style="text-align: right; margin:5px 0px">
+                            <button class="btn btn-light" onclick="onClickOpenConversationById()">Open conversation <i class="fa-regular fa-comment" aria-hidden="true"></i></button>
+                        </div>
                     </div>
                     <div class="row section c21-parameters">
                         <div><h3 style="line-height: 0.3;">MANAGE <em><strong>widget settings</strong></em></h3></div>

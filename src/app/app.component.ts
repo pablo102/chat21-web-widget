@@ -1383,10 +1383,17 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                 });
             };
 
-            /** set state reinit */
+            /** start new conversation */
             windowContext['tiledesk'].startConversation = function (text: string) {
                 ngZone.run(() => {
                     windowContext['tiledesk']['angularcomponent'].component.onNewConversation(text);
+                });
+            };
+
+            /** open widget with conversation ID */
+            windowContext['tiledesk'].openConversationById = function (request_id: string) {
+                ngZone.run(() => {
+                    windowContext['tiledesk']['angularcomponent'].component.openConversationById(request_id);
                 });
             };
 
@@ -1785,6 +1792,15 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         // this.sendMessage(message)
         this.tiledeskRequestsService.sendMessageToRequest(newConvId, this.g.tiledeskToken, message)
         return;
+    }
+
+    openConversationById(requestId){
+        this.isOpenConversation = true;
+
+        this.g.setParameter('recipientId', requestId);
+        this.appStorageService.setItem('recipientId', requestId)
+
+        this.isConversationArchived = false;
     }
 
     /**
