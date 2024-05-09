@@ -1708,7 +1708,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                     this.forceDisconnect = false;
                 }
                 //this.f21_open();
-                this._f21_open()
+                this.f21_open();
             }
             // this.conversationSelected = $event;
             if($event.channel_type === CHANNEL_TYPE.DIRECT){
@@ -1718,6 +1718,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.g.setParameter('recipientId', $event.recipient);
                 this.appStorageService.setItem('recipientId', $event.recipient)
             }
+            this.g.isOpenPrechatForm = false;
             this.isOpenConversation = true;
             $event.archived? this.isConversationArchived = $event.archived : this.isConversationArchived = false;
             this.logger.debug('[APP-COMP] onSelectConversation in APP COMPONENT: ', $event);
