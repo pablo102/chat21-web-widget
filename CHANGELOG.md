@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.77-rc.2
+- bug-fixed: if user click on proactive attachment button, widget show prechatForm 
+
 ### 5.0.77-rc.1
 - added: ability to programmatically open an old conversation by request_id
 
