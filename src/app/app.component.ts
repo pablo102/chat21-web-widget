@@ -1796,6 +1796,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     openConversationById(requestId){
+        this.logger.log('[APP-COMP] openConversationById in APP COMPONENT', requestId);
         this.isOpenConversation = true;
 
         this.g.setParameter('recipientId', requestId);
