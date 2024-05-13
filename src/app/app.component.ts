@@ -1803,6 +1803,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         this.appStorageService.setItem('recipientId', requestId)
 
         this.isConversationArchived = false;
+        if (this.g.isOpen === false) {
+            this.f21_open();
+        }
+        
     }
 
     /**
