@@ -5,6 +5,8 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.77 in PROD
+
 ### 5.0.77-rc.2
 - bug-fixed: if user click on proactive attachment button, widget show prechatForm 
 
