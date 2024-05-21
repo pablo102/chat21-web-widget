@@ -142,11 +142,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                 if (that.g.isOpen === true && conversation) {
                     that.g.setParameter('displayEyeCatcherCard', 'none');
                     that.triggerOnConversationUpdated(conversation);
-                    that.logger.debug('[APP-COMP] obsAddedConversation ::: ', conversation);
+                    that.logger.debug('[APP-COMP] obsAddedConversation ::: ', conversation, this.isInitialized);
                     if (conversation.attributes && conversation.attributes['subtype'] === 'info') {
                         return;
                     }
-                    if (conversation.is_new) {
+                    if (conversation.is_new && this.isInitialized) {
                         that.manageTabNotification(false, 'conv-added')
                         // this.soundMessage(); 
                     }
