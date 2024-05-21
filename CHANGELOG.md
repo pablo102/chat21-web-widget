@@ -5,6 +5,9 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.79-rc.1
+- added: do not sound again on conv.added if chrome reconnect after inactivity timeout 
+
 ### 5.0.78 in PROD
 
 ### 5.0.77 in PROD
