@@ -251,11 +251,12 @@ export class ConversationFooterComponent implements OnInit, OnChanges {
       // });
       // this.resetLoadImage();
       
-      this.uploadService.upload(this.senderId, currentUpload).then(downloadURL => {
-        that.logger.debug('[CONV-FOOTER] AppComponent::uploadSingle:: downloadURL', downloadURL);
-        that.logger.debug(`[CONV-FOOTER] Successfully uploaded file and got download link - ${downloadURL}`);
+      this.uploadService.upload(this.senderId, currentUpload).then(data => {
+        that.logger.debug('[CONV-FOOTER] AppComponent::uploadSingle:: downloadURL', data);
+        that.logger.debug(`[CONV-FOOTER] Successfully uploaded file and got download link - ${data}`);
 
-        metadata.src = downloadURL;
+        metadata.src = data.src;
+        metadata.downloadURL = data.downloadURL;
         let type_message = TYPE_MSG_TEXT;
         // let message = 'File: ' + metadata.src;
         let message = `[${metadata.name}](${metadata.src})`
