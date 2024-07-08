@@ -5,6 +5,12 @@
     *Dario De Pascalis* 
 ### **Copyrigth**: *Tiledesk SRL*
 
+### 5.0.80-rc.1
+- added: network-offline component to manage network connection/disconnection
+- added: onDisconnect MQTT method to subscribe and manage reconnect/close/offline event
+- changed: v0.1.12.8 chat21client.js
+
+
 ### 5.0.79 in PROD
 
 ### 5.0.79-rc.3
