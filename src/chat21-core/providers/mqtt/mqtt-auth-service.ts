@@ -265,7 +265,15 @@ z
     this.chat21Service.chatClient.connect(userid, credentials.token, () => {
       this.logger.debug('[MQTTAuthService] connectMQTT: Chat connected');
       this.BSAuthStateChanged.next('online');
+      this.onDisconnectMQTT();
     });
+  }
+
+  onDisconnectMQTT(): any{
+    this.chat21Service.chatClient.onDisconnect((state)=> {
+      this.logger.debug('[MQTTAuthService] onDisconnect --> ', state)
+      this.BSAuthStateChanged.next('close');
+    })
   }
 
   // /**

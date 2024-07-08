@@ -37,7 +37,7 @@ import { TranslatorService } from './providers/translator.service';
 // UTILS
 import * as dayjs from 'dayjs';
 import { MessageModel } from 'src/chat21-core/models/message';
-import { AUTH_STATE_OFFLINE, AUTH_STATE_ONLINE, CHANNEL_TYPE, TYPE_MSG_FILE, TYPE_MSG_IMAGE, URL_SOUND_LIST_CONVERSATION } from 'src/chat21-core/utils/constants';
+import { AUTH_STATE_CLOSE, AUTH_STATE_OFFLINE, AUTH_STATE_ONLINE, CHANNEL_TYPE, TYPE_MSG_FILE, TYPE_MSG_IMAGE, URL_SOUND_LIST_CONVERSATION } from 'src/chat21-core/utils/constants';
 import { supports_html5_storage } from 'src/chat21-core/utils/utils';
 import { UID_SUPPORT_GROUP_MESSAGES } from './utils/constants';
 import { Globals } from './utils/globals';
@@ -103,6 +103,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   marginBottom: number;
   
   forceDisconnect: boolean = false;
+
+  //network status
+  isOnline: boolean = true;
+  
   private logger: LoggerService = LoggerInstance.getInstance();
   constructor(
     private el: ElementRef,
@@ -358,6 +362,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         this.triggerLoadParamsEvent(); // first trigger
         //this.setAvailableAgentsStatus();
 
+
+        /** NETWORK STATUS */
+        this.listenToNetworkStatus()
+
     }
 
     // ========= begin:: SUBSCRIPTIONS ============//
@@ -434,6 +442,12 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
                 that.triggerOnAuthStateChanged(that.stateLoggedUser);
                 if (autoStart) {
                     that.authenticate();
+                }
+            }else if(state && state === AUTH_STATE_CLOSE ){
+                that.logger.info('[APP-COMP] CLOSE - CHANNEL CLOSED: ', this.chatManager);
+                if(this.g.recipientId){
+                    this.chatManager.removeConversationHandler(this.g.recipientId)
+                    this.g.recipientId = null;
                 }
             }
 
@@ -2119,6 +2133,11 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
             that.logger.log('[FORCE] <<INTERACTION>> within 1 minute')
             clearTimeout(clickTimeout)
         })
+    }
+
+    private listenToNetworkStatus(){
+        window.addEventListener('online', () => this.isOnline = true);
+        window.addEventListener('offline', () =>  this.isOnline = false);
     }
 
     // ========= begin:: DESTROY ALL SUBSCRIPTIONS ============//

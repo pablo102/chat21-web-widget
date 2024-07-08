@@ -300,9 +300,13 @@ export class ConversationComponent implements OnInit, AfterViewInit, OnChanges {
       // this.scrollToBottom();
     }
     // CHECK if conversationId is changed and re-build component
-    if(changes && changes['conversationId'] && changes['conversationId'].previousValue !== undefined && (changes['conversationId'].previousValue !== changes['conversationId'].currentValue)){
+    if(changes && 
+        changes['conversationId'] && 
+        changes['conversationId'].previousValue !== undefined && 
+        (changes['conversationId'].previousValue !== changes['conversationId'].currentValue) &&
+        changes['conversationId'].currentValue
+      ){
       this.logger.debug("[CONV-COMP] UID CHANGESSSS", changes['conversationId'])
-      
       this.ngOnDestroy();
       this.ngOnInit();
       this.ngAfterViewInit();
@@ -446,7 +450,7 @@ export class ConversationComponent implements OnInit, AfterViewInit, OnChanges {
   private setConversation() {
     const recipientId = this.g.recipientId;
     const channelType = this.g.channelType;
-    this.logger.debug('[CONV-COMP] setConversation recipientId::: ', recipientId, channelType);
+    this.logger.debug('[CONV-COMP] setConversation recipientId::: ', recipientId, channelType, this.g.recipientId);
     if ( !recipientId ) { this.g.setParameter('recipientId', this.setRecipientId()); }
     if ( !channelType ) { this.g.setParameter('channelType', this.setChannelType()); }
     this.conversationWith = recipientId as string;
