@@ -77,6 +77,8 @@
     "LABEL_PRECHAT_ACCEPT_TERMS_PRIVACY": "I agree",
     "PRECHAT_REQUIRED_ERROR": "This field is required",
 
+    "TICKET_TAKING":"The request has been received and the assistance staff is dealing with it.\nTo add more comments, reply to this email.",
+    
     "LABEL_TODAY": "today",
     "LABEL_TOMORROW": "yesterday",
     "LABEL_LAST_ACCESS": "last access",
@@ -87,5 +89,6 @@
     "SENT_AN_IMAGE":"sent an image",
 
     "LABEL_PREVIEW": "Preview",
-    "SWITCH_TO": "Or switch to:"
+    "SWITCH_TO": "Or switch to:",
+    "CONNECTION_NETWORK_ERROR": "Our apologies. There was some trouble connecting to network"
 }
