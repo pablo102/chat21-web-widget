@@ -65,7 +65,7 @@ export class ConversationPreviewComponent implements OnInit {
   getMetadataSize(metadata): {width, height} {
     const MAX_WIDTH_IMAGES_PREVIEW = 230
     const MAX_HEIGHT_IMAGES_PREIEW = 150
-    console.log('PREVIEW - getMetadataSize metadata', metadata)
+    
     if(metadata.width === undefined){
       metadata.width= MAX_WIDTH_IMAGES_PREVIEW
     }
@@ -96,7 +96,7 @@ export class ConversationPreviewComponent implements OnInit {
       sizeImage.width = MAX_HEIGHT_IMAGES_PREIEW / ratio;
       sizeImage.height = MAX_HEIGHT_IMAGES_PREIEW ;
     }
-    console.log('PREVIEW - getMetadataSize return sizeimage', sizeImage)
+    
     return sizeImage; // h.toString();
   }
   

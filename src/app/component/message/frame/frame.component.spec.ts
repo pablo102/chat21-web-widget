@@ -31,7 +31,6 @@ describe('FrameComponent', () => {
 
   it('should create', () => {
     component.url = component['sanitizer'].bypassSecurityTrustResourceUrl('http://www.tiledesk.com');
-    console.log('cccccc', component)
     fixture.detectChanges();
     expect(component).toBeTruthy();
   });

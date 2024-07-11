@@ -15,7 +15,6 @@ export class SendButtonComponent implements OnInit {
   }
 
   onSendPressed(event){
-    console.log('send pressed')
     this.onSendButtonClicked.emit(true)
   }
 

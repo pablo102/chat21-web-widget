@@ -22,7 +22,6 @@ export class ConversationEmojiiComponent implements OnInit {
   constructor(){}
 
   ngOnInit(): void {
-    console.log('varrrrr', this.var)
   }
 
   addEmojiFN(event){

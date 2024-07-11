@@ -100,7 +100,6 @@ export class BubbleMessageComponent implements OnInit {
       height: metadata.height
     };
 
-    // console.log('sizeeeeeeee--<', sizeImage, metadata)
 
     if (metadata.width && metadata.width < MAX_WIDTH_IMAGES) {
       if (metadata.width <= 55) {

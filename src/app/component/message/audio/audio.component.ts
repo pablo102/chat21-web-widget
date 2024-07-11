@@ -19,7 +19,6 @@ export class AudioComponent implements OnInit {
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
-    // console.log('metadataaaaaa', this.metadata)
     // this.divPlay = this.elementRef.nativeElement.querySelector('#audio_container').querySelector('#audio_msg')
     // this.playState= this.elementRef.nativeElement.querySelector('#audio_container').querySelector('#duration')
   }
