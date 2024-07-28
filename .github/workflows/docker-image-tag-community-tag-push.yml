@@ -17,6 +17,6 @@ jobs:
        with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        repository: chat21/chat21-web-widget
+        repository: webtrafficbiz/chat21-web-widget
         push: true
         tag_with_ref: true
